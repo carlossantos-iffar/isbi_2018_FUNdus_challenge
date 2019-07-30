@@ -601,7 +601,7 @@ def weights_for_activation2coord(act_h, act_w):
     weights = np.zeros((act_h * act_w, 2))
     for i in range(act_h * act_w):
         weights[i, 0] = (0.5 + i / act_w) * l_h
-        weights[i, 1] = (0.5 + i % act_h) * l_w
+        weights[i, 1] = (0.5 + i % act_w) * l_w
     return np.expand_dims(weights, axis=0)
 
 
